@@ -16,8 +16,6 @@ Investigation from linguistic and data-driven perspectives shows that speech fou
 
 [![AACL 2025 Poster](AACL_2025_Poster.pdf)](AACL_2025_Poster.pdf)
 
-*Click the image above to view or download the full poster PDF.*
-
 ---
 
 ## Competitions & Reports
