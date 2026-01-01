@@ -1,4 +1,4 @@
-**Are ASR foundation models generalized enough to capture features of regional dialects for low-resource languages?**
+## **Are ASR foundation models generalized enough to capture features of regional dialects for low-resource languages?**
 
 Accepted at **AACL 2025** | [Paper (Coming Soon)](#) | [Poster](AACL_2025_Poster.pdf) | [Dataset](https://huggingface.co/datasets/bengaliAI/Ben-10) | [Model](https://huggingface.co/bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium/tree/main) | [Demo](https://huggingface.co/spaces/bengaliAI/regional_bengali-asr_tugstugi_whisper-medium)
 
