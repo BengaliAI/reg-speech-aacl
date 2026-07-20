@@ -1,6 +1,6 @@
 ## **Are ASR foundation models generalized enough to capture features of regional dialects for low-resource languages?**
 
-Accepted at **AACL 2025** | [Paper](https://aclanthology.org/2025.ijcnlp-short.17.pdf) | [Poster](AACL_2025_Poster.pdf) | [Dataset](https://huggingface.co/datasets/bengaliAI/Ben-10) | [Model](https://huggingface.co/bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium/tree/main) | [Demo](https://huggingface.co/spaces/bengaliAI/regional_bengali-asr_tugstugi_whisper-medium) | [Video Presentation](https://youtu.be/47A5zD9Rc_k?si=uXvLDjgfHvcRf8QE)
+Accepted at **AACL 2025** | [Paper](https://aclanthology.org/2025.ijcnlp-short.17.pdf) | [Poster](AACL_2025_Poster.pdf) | [Dataset](https://huggingface.co/datasets/bengaliAI/Ben-10) | [Model](https://huggingface.co/bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium/tree/main) | [Demo](https://huggingface.co/spaces/bengaliAI/regional_bengali-asr_tugstugi_whisper-medium) | [Leaderboard](https://huggingface.co/spaces/bengaliAI/ben10-asr-leaderboard) | [Video Presentation](https://youtu.be/47A5zD9Rc_k?si=uXvLDjgfHvcRf8QE)
 
 ---
 
@@ -19,6 +19,28 @@ A competition was organized on Kaggle based on this dataset.
 
 ---
 
+## Leaderboard (Ben-10 regional ASR)
+
+Public WER board on the **private** Ben-10 test partition. Test audio, ids, and gold transcripts are **not** released. Scores are produced by Bengali.AI maintainers.
+
+| | |
+| --- | --- |
+| **Board** | https://huggingface.co/spaces/bengaliAI/ben10-asr-leaderboard |
+| **Results table** | https://huggingface.co/datasets/bengaliAI/ben10-asr-results |
+| **Public train data** | https://huggingface.co/datasets/bengaliAI/Ben-10 |
+
+### How to get your model evaluated
+
+1. Put a downloadable checkpoint on the Hub (or another stable URL).
+2. Open a **[Ben-10 ASR evaluation request](https://github.com/BengaliAI/reg-speech-aacl/issues/new?template=ben10-eval-request.yml)** issue.
+3. Maintainers run decode on the closed test set and publish **WER only** (hypotheses are not returned).
+
+Unsupported stacks may be declined until we add a backend. Do not upload predictions or request the test set.
+
+Maintainer tooling lives in [`leaderboard/`](leaderboard/).
+
+---
+
 ## Dataset Details
 
 - **Size:** 78 hours of annotated Bengali speech
@@ -34,6 +56,7 @@ A competition was organized on Kaggle based on this dataset.
 reg-speech-aacl/
 ├── finetuning/          # Fine-tuning scripts and notebooks
 ├── result_analysis/     # Analysis notebooks and results
+├── leaderboard/         # Maintainer-run eval scoring / decode
 ├── AACL_2025_Poster.pdf # Conference poster
 └── README.md           # This file
 ```
@@ -42,6 +65,7 @@ reg-speech-aacl/
 The repository contains:
 - **Finetuning scripts** (`finetuning/`): Code for fine-tuning ASR models on regional dialects
 - **Result analysis** (`result_analysis/`): Analysis notebooks for different regions
+- **Leaderboard** (`leaderboard/`): Maintainer scoring tools (see section above to request an eval)
 
 ---
 
