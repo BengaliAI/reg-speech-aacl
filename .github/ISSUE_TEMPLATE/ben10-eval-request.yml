@@ -1,0 +1,46 @@
+name: Ben-10 ASR evaluation request
+description: Ask Bengali.AI maintainers to score your model on the private Ben-10 test set
+title: "[ben10-eval] "
+labels: ["ben10-eval"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Test audio / labels stay private. Maintainers run decode and publish **WER only**.
+        Board: https://huggingface.co/spaces/bengaliAI/ben10-asr-leaderboard
+  - type: input
+    id: model_url
+    attributes:
+      label: Model URL
+      description: Hugging Face model id or other downloadable checkpoint URL
+      placeholder: bengaliAI/your-model
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Preferred decode backend (if known)
+      options:
+        - whisper (transformers / faster-whisper)
+        - nemo
+        - other / unsure
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: Model license
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Paper link, decode tips, language code, beam size expectations, etc.
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Acknowledgments
+      options:
+        - label: I understand maintainers may decline unsupported stacks, and hypotheses will not be returned.
+          required: true
