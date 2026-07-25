@@ -12,8 +12,9 @@ Pinned for recreate of the 2026-07-19 regional Whisper baseline:
 ```bash
 cd leaderboard
 uv sync          # creates .venv from uv.lock (Python 3.12, torch cu124)
-uv run python env_versions.py
 ```
+
+Runtime package receipt lives inside each run's `metrics.json` (`score.py --record-env`).
 
 | Pin | Value |
 | --- | --- |
@@ -51,4 +52,4 @@ uv run python score.py \
 
 Hyps CSV columns: `file_name,sentence` (ids may omit `.wav`).
 
-Then append a row to `ben10-asr-results` `results.csv` (scores only). Record `scorer_commit` / lock SHA in the row notes. Baseline snapshot: `baselines/2026-07-19-regional-whisper.*`.
+Then append a row to `ben10-asr-results` `results.csv` (scores only). Record `scorer_commit` / lock SHA in the row notes. Baseline snapshot (WER + env): `baselines/2026-07-19-regional-whisper.metrics.json`.

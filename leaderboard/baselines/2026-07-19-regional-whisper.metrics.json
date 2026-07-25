@@ -19,7 +19,7 @@
   "decode_commit": "0261b1e0dafcb10ea9a99c25f2bf34efef468f2c",
   "evaluated_at": "2026-07-19",
   "requested_by": "maintainer",
-  "notes": "Baseline seed; decode via leaderboard/decode_whisper.py batch=4 chunk=30s on RTX2070; decode_whisper.py (now in repo); baseline predated uv.lock; env pin: leaderboard/uv.lock + baselines/2026-07-19-regional-whisper.env.json; uv.lock@091129d213cb (reg-speech-aacl@6dcdfe9)",
+  "notes": "Baseline seed; decode via leaderboard/decode_whisper.py batch=4 chunk=30s on RTX2070; baseline predated uv.lock; env receipt in this metrics.json; pin: leaderboard/uv.lock@091129d213cb (reg-speech-aacl@6dcdfe9)",
   "n_utt": 1689,
   "env": {
     "python": "3.12.11",
