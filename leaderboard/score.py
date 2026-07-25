@@ -37,6 +37,11 @@ def main() -> None:
     p.add_argument("--requested-by", default="maintainer")
     p.add_argument("--notes", default="")
     p.add_argument("--out", type=Path, default=Path("metrics.json"))
+    p.add_argument(
+        "--record-env",
+        action="store_true",
+        help="Attach env_versions() package pins to metrics.json",
+    )
     args = p.parse_args()
 
     gold = pd.read_csv(args.gold)
@@ -77,6 +82,10 @@ def main() -> None:
         "notes": args.notes,
         "n_utt": int(len(merged)),
     }
+    if args.record_env:
+        from env_versions import versions
+
+        row["env"] = versions()
     args.out.write_text(json.dumps(row, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps(row, ensure_ascii=False, indent=2))
     print(f"\nWrote {args.out} — append scores (not hyps) to bengaliAI/ben10-asr-results")
