@@ -52,4 +52,14 @@ uv run python score.py \
 
 Hyps CSV columns: `file_name,sentence` (ids may omit `.wav`).
 
-Then append a row to `ben10-asr-results` `results.csv` (scores only). Record `scorer_commit` / lock SHA in the row notes. Baseline snapshot (WER + env): `baselines/2026-07-19-regional-whisper.metrics.json`.
+## Publish (scores only)
+
+```bash
+export HF_TOKEN=...   # write access to bengaliAI
+uv run python publish_results.py --metrics /path/to/private_run/metrics.json --dry-run
+uv run python publish_results.py --metrics /path/to/private_run/metrics.json --publish
+```
+
+Upserts one row into `ben10-asr-results` `results.csv`, re-sorts by WER, rewrites rank. Refuses a duplicate `model_id` without `--replace`. Never uploads hyps or the `env` receipt. The Space re-reads the CSV on page load.
+
+Baseline snapshot (WER + env): `baselines/2026-07-19-regional-whisper.metrics.json`.
