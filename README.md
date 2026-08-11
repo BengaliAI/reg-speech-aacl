@@ -74,13 +74,31 @@ The repository contains:
 If you use this dataset or code in your research, please cite:
 
 ```bibtex
-@inproceedings{ben10-2025,
-  title={Are ASR foundation models generalized enough to capture features of regional dialects for low-resource languages?},
-  author={...},
-  booktitle={Proceedings of AACL 2025},
-  year={2025}
+@inproceedings{dipto-etal-2025-asr,
+    title = "Are {ASR} foundation models generalized enough to capture features of regional dialects for low-resource languages?",
+    author = "Dipto, Tawsif Tashwar  and
+      Hossain, Azmol  and
+      Faruque, Rubayet Sabbir  and
+      Hassan, Md. Rezuwan  and
+      Fatema, Kanij  and
+      Shome, Tanmoy  and
+      Naswan, Ruwad  and
+      Zihad, Md. Foriduzzaman  and
+      Anam, Mohaymen Ul  and
+      Tasnim, Nazia  and
+      Mahmud, Hasan  and
+      Hasan, Md Kamrul  and
+      Shawon, Md. Mehedi Hasan  and
+      Sadeque, Farig  and
+      Reasat, Tahsin",
+    booktitle = "Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics",
+    month = dec,
+    year = "2025",
+    address = "Mumbai, India",
+    publisher = "The Asian Federation of Natural Language Processing and The Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.ijcnlp-short.17/",
+    doi = "10.18653/v1/2025.ijcnlp-short.17",
+    pages = "178--188",
 }
 ```
-
-*Citation will be updated once the paper is published.*
 
